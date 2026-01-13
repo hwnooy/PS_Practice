@@ -6,7 +6,7 @@ n = int(input())
 def bubble(arr):
     for k in range(len(arr)-1, 0, -1):
         #print("index K = " , k)
-        for i in range(0, len(arr)-1):
+        for i in range(0,k):
            # print("index I = ", i)
             if arr[i]>arr[i+1]:
                 tmp=arr[i]
