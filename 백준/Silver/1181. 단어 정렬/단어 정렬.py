@@ -1,14 +1,14 @@
 import sys
+input = sys.stdin.readline
+n = int(input())
+line = [0]*51
+lined = {}
+for k in range(n):
+    word = input().rstrip()
+    lined[word]= len(word)
 
-n = int(sys.stdin.readline())
-lst = []
-
-for i in range(n):
-    lst.append(sys.stdin.readline().strip())
-set_lst = set(lst)
-lst = list(set_lst)
-lst.sort()
-lst.sort(key = len)
-
-for i in lst:
-    print(i)
+sortArr = sorted(lined.items(), key = lambda x: (x[1], x[0]))
+#print(sortArr)
+for k in sortArr:
+    #for (a,b) in k:
+    print(k[0])
